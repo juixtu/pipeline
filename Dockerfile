@@ -1,6 +1,6 @@
 FROM harbor.youjiqing.club/rancher/nginx:latest
 WORKDIR /usr/share/nginx/html/
-CMD mkdir img
+RUN mkdir img
 ADD rancher-logo.svg img/
 ADD favicon.png img/
 ADD index.html .
