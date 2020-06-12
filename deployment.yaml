@@ -2,19 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: pipeline-demo
-    from: pipeline
+    app: nginx
   name: nginx
   namespace: rancher
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pipeline-demo
+      app: nginx
   template:
     metadata:
       labels:
-        app: pipeline-demo
+        app: nginx
     spec:
       containers:
       - image: juixtu/rancher:${CICD_EXECUTION_SEQUENCE}
