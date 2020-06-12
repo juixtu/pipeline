@@ -11,7 +11,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: juixtu/nginx:${CICD_EXECUTION_SEQUENCE}
+      tag: juixtu/rancher:${CICD_EXECUTION_SEQUENCE}
       registry: index.docker.io
 timeout: 60
 notification: {}
