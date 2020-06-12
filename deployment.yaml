@@ -17,7 +17,7 @@ spec:
         app: pipeline-demo
     spec:
       containers:
-      - image: 127.0.0.1:34949/juixtu/rancher:${CICD_EXECUTION_SEQUENCE}
+      - image: juixtu/rancher:${CICD_EXECUTION_SEQUENCE}
         imagePullPolicy: Always
         name: demo
         ports:
