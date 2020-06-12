@@ -6,14 +6,12 @@ stages:
       shellScript: |-
         pwd
         ls -al
-- name: Publish
+- name: Push
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: juixtu/nginx:${CICD_EXECUTION_SEQUENCE}
-      registry: harbor.youjiqing.club
-    env:
-      PLUGIN_INSECURE: "true"
+      registry: 127.0.0.1:34407
 timeout: 60
 notification: {}
