@@ -4,8 +4,8 @@ metadata:
   labels:
     app: pipeline-demo
     from: pipeline
-  name: pipeline-demo
-  namespace: pipelinedemo
+  name: nginx
+  namespace: rancher
 spec:
   replicas: 1
   selector:
@@ -17,7 +17,7 @@ spec:
         app: pipeline-demo
     spec:
       containers:
-      - image: harbor.youjiqing.club/rancher/nginx:${CICD_EXECUTION_SEQUENCE}
+      - image: 127.0.0.1:34949/juixtu/rancher:${CICD_EXECUTION_SEQUENCE}
         imagePullPolicy: Always
         name: demo
         ports:
