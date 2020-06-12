@@ -2,7 +2,7 @@ stages:
 - name: Build
   steps:
   - runScriptConfig:
-      image: harbor.youjiqing.club/rancher/busybox:latest
+      image: busybox:latest
       shellScript: |-
         pwd
         ls -al
