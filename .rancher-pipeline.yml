@@ -11,27 +11,9 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: harbor.youjiqing.club/rancher/nginx:${CICD_EXECUTION_SEQUENCE}
-      pushRemote: true
+      tag: juixtu/nginx:${CICD_EXECUTION_SEQUENCE}
       registry: harbor.youjiqing.club
     env:
       PLUGIN_INSECURE: "true"
-- name: Catalog
-  steps:
-  - publishCatalogConfig:
-      path: ./pipeline-demo/
-      catalogTemplate: pipeline-demo
-      version: 1.0.${CICD_EXECUTION_SEQUENCE}
-      gitUrl: https://github.com/JackieYou/demo-charts
-      gitBranch: master
-      gitAuthor: JackieYou
-      gitEmail: jiqing@rancher.com
-    envFrom:
-    - sourceName: github
-      sourceKey: USERNAME
-      targetKey: USERNAME
-    - sourceName: github
-      sourceKey: PASSWORD
-      targetKey: PASSWORD
 timeout: 60
 notification: {}
