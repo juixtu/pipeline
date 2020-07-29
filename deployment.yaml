@@ -16,7 +16,8 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: juixtu/rancher:${CICD_EXECUTION_SEQUENCE}
+      #juixtu/rancher:${CICD_EXECUTION_SEQUENCE}
+      - image: juixtu/rancher:v1
         imagePullPolicy: Always
         name: demo
         ports:
