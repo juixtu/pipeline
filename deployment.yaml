@@ -23,3 +23,18 @@ spec:
         - containerPort: 80
           name: http
           protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+  namespace: rancher
+spec:
+  selector:
+    app: nginx
+  ports:
+  - name: nginx
+    port: 80
+    targetPort: 80
+    protocol: TCP
+  type: NodePort
