@@ -16,7 +16,7 @@ spec:
         app: {{ .Values.app.name }}
     spec:
       containers:
-      - image: harbor.youjiqing.club/rancher/nginx:${CICD_EXECUTION_SEQUENCE}
+      - image: juixtu/nginx:${CICD_EXECUTION_SEQUENCE}
         imagePullPolicy: {{ .Values.deployment.pullpolicy }}
         name: {{ .Values.app.name }}
         ports:
