@@ -14,6 +14,21 @@ stages:
       tag: juixtu/rancher:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: index.docker.io
+  - publishCatalogConfig:
+      path: /pipline-demo
+      catalogTemplate: demo-web
+      version: 1.0.${CICD_EXECUTION_SEQUENCE}
+      gitUrl: https://github.com/juixtu/charts.git
+      gitBranch: master
+      gitAuthor: leo
+      gitEmail: jiaying@rancher.com
+    envFrom:
+    - sourceName: github
+      sourceKey: USERNAME
+      targetKey: USERNAME
+    - sourceName: github
+      sourceKey: PASSWORD
+      targetKey: PASSWORD
 - name: deploy
   steps:
   - applyYamlConfig:
