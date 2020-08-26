@@ -7,10 +7,10 @@ keywords:
 - docker
 - demo
 - pipeline
-home: https://github.com/JackieYou/demo-charts/pipeline-demo
+home: https://github.com/juixtu/pipeline/pipeline-demo
 icon: https://markdown-1300017440.cos.ap-shanghai.myqcloud.com/mweb/1.png
 sources:
-- https://github.com/JackieYou/demo-charts/pipeline-demo
+- https://github.com/juixtu/pipeline/pipeline-demo
 maintainers:
-- name: Jackie You
-  email: jiqing@rancher.com
+- name: leo
+  email: jiaying@rancher.com
