@@ -11,7 +11,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: juixtu/rancher:${CICD_EXECUTION_SEQUENCE}
+      tag: juixtu/nginx:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: index.docker.io
   - publishCatalogConfig:
