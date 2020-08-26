@@ -15,7 +15,7 @@ stages:
       pushRemote: true
       registry: index.docker.io
   - publishCatalogConfig:
-      path: ./pipline-demo
+      path: ./pipeline-demo
       catalogTemplate: demo-web
       version: 1.0.${CICD_EXECUTION_SEQUENCE}
       gitUrl: https://github.com/juixtu/charts.git
