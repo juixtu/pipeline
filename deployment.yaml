@@ -4,7 +4,7 @@ metadata:
   labels:
     app: nginx
   name: nginx
-  namespace: pipeline
+  namespace: cicd
 spec:
   replicas: 1
   selector:
@@ -29,7 +29,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx
-  namespace: pipeline
+  namespace: cicd
 spec:
   selector:
     app: nginx
