@@ -1,4 +1,4 @@
-FROM juixtu/nginx-base
+FROM nginx
 WORKDIR /usr/share/nginx/html/
 RUN mkdir img
 ADD rancher-logo.svg img/
